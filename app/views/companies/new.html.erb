@@ -1,0 +1,18 @@
+<h2>Add New Company</h2>
+
+<%= form_with(model: @company, url: companies_path, method: :post) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Company", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<br>
+<%= link_to "Back to Home Page", companies_path, class: "btn btn-secondary" %>
