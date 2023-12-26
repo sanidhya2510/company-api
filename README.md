@@ -43,7 +43,7 @@ rails server
 ```
 The API will be accessible at http://localhost:3000.
 
-## Frontend (Basic)
+### Frontend (Basic)
 
 The project includes a basic frontend to interact with the API. The frontend is built using Ruby on Rails views, providing a simple user interface to perform basic operations.
 
