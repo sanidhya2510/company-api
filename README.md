@@ -55,8 +55,8 @@ This basic frontend complements the API functionality, providing a user-friendly
 
 **API Endpoints:**
 
-- **List Companies:** `GET /companies.json`
-- **Company Details:** `GET /companies/:id.json`
+- **List Companies:** `GET /companies.json` (Requires user authentication)
+- **Company Details:** `GET /companies/:id.json` (Requires user authentication)
 - **Add Company:** `POST /companies.json` (Requires authentication and admin role)
 
 **Authentication and Authorization:**
