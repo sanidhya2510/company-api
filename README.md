@@ -40,6 +40,18 @@ Start the Rails server:
 
 ```bash
 rails server
+```
+The API will be accessible at http://localhost:3000.
+
+## Frontend (Basic)
+
+The project includes a basic frontend to interact with the API. The frontend is built using Ruby on Rails views, providing a simple user interface to perform basic operations.
+
+- **Login/SignUp Page**
+- **Add New Company:** The frontend includes a form accessible to users with admin privileges. Admin users can input the name and location to add a new company to the list.
+- **Company API:** Users can access the API endpoints for listing companies in a JSON file.
+
+This basic frontend complements the API functionality, providing a user-friendly interface for performing essential actions.
 
 **API Endpoints:**
 
@@ -49,13 +61,12 @@ rails server
 
 **Authentication and Authorization:**
 
-The API uses Devise for authentication. To authenticate, include the authentication token in the request header.
-
+The API uses Devise for authentication.
 - **Admin Access:** Only users with the role 'admin' can add new companies.
 
 **Error Handling:**
 
-The API provides comprehensive error handling for various scenarios, including cases where a company is not found or when an invalid request is made (e.g., missing parameters). Detailed error responses are provided in JSON format.
+The API provides comprehensive error handling for various scenarios, including cases where a company is not found or when an invalid request is made (e.g., missing parameters). 
 
 **Testing:**
 
@@ -63,3 +74,4 @@ The project includes RSpec tests for various scenarios. Run the tests with:
 
 ```bash
 bundle exec rspec
+```
