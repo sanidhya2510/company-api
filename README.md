@@ -62,7 +62,7 @@ This basic frontend complements the API functionality, providing a user-friendly
 **Authentication and Authorization:**
 
 The API uses Devise for authentication.
-- **Admin Access:** Only users with the role 'admin' can add new companies.
+- **Admin Access:** Only users with the role 'admin' can add new companies. Admins can only be added manually, while users can be added using Signup option.
 
 **Error Handling:**
 
