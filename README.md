@@ -1,24 +1,65 @@
-# README
+# Company API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Company API is a Ruby on Rails application that provides a robust API for managing company information. It includes features for retrieving a list of companies, viewing individual company details, and adding new companies. The API incorporates authentication and authorization for secure access.
 
-* Ruby version
+## Features
 
-* System dependencies
+- **List Companies**: Retrieve a list of companies with detailed information.
+- **Company Details**: View detailed information for individual companies.
+- **Add Companies**: Authenticated users with admin roles can add new companies.
 
-* Configuration
+## Getting Started
 
-* Database creation
+### Installation
 
-* Database initialization
+1. **Clone the repository:**
 
-* How to run the test suite
+    ```bash
+    git clone https://github.com/your-username/company-api.git
+    cd company-api
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+2. **Install dependencies:**
 
-* Deployment instructions
+    ```bash
+    bundle install
+    ```
 
-* ...
+3. **Set up the database:**
+
+    ```bash
+    rails db:create
+    rails db:migrate
+    ```
+
+### Usage
+
+Start the Rails server:
+
+```bash
+rails server
+
+**API Endpoints:**
+
+- **List Companies:** `GET /companies.json`
+- **Company Details:** `GET /companies/:id.json`
+- **Add Company:** `POST /companies.json` (Requires authentication and admin role)
+
+**Authentication and Authorization:**
+
+The API uses Devise for authentication. To authenticate, include the authentication token in the request header.
+
+- **Admin Access:** Only users with the role 'admin' can add new companies.
+
+**Error Handling:**
+
+The API provides comprehensive error handling for various scenarios, including cases where a company is not found or when an invalid request is made (e.g., missing parameters). Detailed error responses are provided in JSON format.
+
+**Testing:**
+
+The project includes RSpec tests for various scenarios. Run the tests with:
+
+```bash
+bundle exec rspec
